@@ -1,0 +1,140 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7b7b7b;
+    margin: 0;
+    padding: 10px;
+    border-radius: 50px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 8px black;
+    border-radius: 20px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 12px;  /* Reducir tamaño de fuente */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+h2, h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+/* Cuadros de datos */
+.cuadro {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.cuadro h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+/* Reducir espacio entre bloques */
+.data-block {
+    background-color: #f9f9f9;
+    padding: 5px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+/* Estilo para los textos */
+textarea, input {
+    width: 94%;
+    padding: 6px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Ajustar texto en lugar de muchas líneas */
+textarea {
+    resize: vertical;
+    height: 60px; /* Reducir altura de los textarea */
+}
+
+/* Dos columnas para algunos bloques */
+.column-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column-group .data-block {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
+
+/* Estilos específicos para impresión */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+        margin: 0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cuadro {
+        border: 1px solid #000;
+        padding: 8px;
+    }
+
+    .data-block {
+        padding: 6px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem; /* Reducir tamaño de los encabezados */
+    }
+
+    footer {
+        margin-top: 10px;
+    }
+
+    /* Márgenes de página ajustados */
+    @page {
+        margin: 10mm;
+    }
+
+    /* Evitar que el contenido se repita en varias páginas */
+    .section {
+        page-break-inside: avoid;
+    }
+
+    .cuadro {
+        page-break-inside: avoid;
+    }
+
+    .data-block {
+        page-break-inside: avoid;
+    }
+}

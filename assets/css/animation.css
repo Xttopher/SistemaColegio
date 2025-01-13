@@ -1,0 +1,73 @@
+#boton-hover {
+    background-color: #3498db;
+    color: white;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+/* Animación al hacer click */
+#boton-hover.accionado {
+    animation: efectoBoton 7s ease forwards;
+}
+
+/* Definimos la animación */
+@keyframes efectoBoton {
+    /* 0%: El botón en su posición inicial y bajando */
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        background-color: #3498db;
+        color: white;
+    }
+
+    /* 20%: El botón se aleja hacia la izquierda y se encoje mientras baja */
+    20% {
+        transform: translateX(-150vw) translateY(10vh) scale(0.5);
+        opacity: 1;
+        background-color: #2980b9;
+        color: #ecf0f1;
+    }
+
+    /* 40%: El botón aparece desde la izquierda, sigue bajando un poco */
+    40% {
+        transform: translateX(-50%) translateY(15vh) scale(4);
+        opacity: 0.8;
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    /* 60%: El botón sigue bajando hasta el 30% de la pantalla */
+    60% {
+        transform: translateX(-50%) translateY(30vh) scale(6);
+        opacity: 1;
+        background-color: #f39c12;
+        color: white;
+    }
+
+    /* 80%: El botón se mueve hacia la derecha, manteniendo la bajada */
+    80% {
+        transform: translateX(150vw) translateY(30vh) scale(4);
+        opacity: 1;
+        background-color: #f39c12;
+        color: white;
+    }
+
+    /* 100%: El botón regresa a su tamaño original y posición */
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        background-color: #3498db;
+        color: white;
+    }
+}

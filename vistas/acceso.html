@@ -1,0 +1,94 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JPL | GESTIÓN INVENTARIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/LogoSolo2.png" />
+
+    <!-- Bootstrap Css -->
+    <link
+      href="../assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css"/>
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="../assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css"/>
+      <link rel="stylesheet" href="../assets/css/login.css">
+  </head>
+
+  <body data-bs-theme="dark" data-sidebar="dark"> <!-- class="auth-body-bg" -->
+    <div>
+      <div class="container-fluid p-0" style="background-color: #152d17;">
+        <div class="row g-0">
+          <div class="col-lg-4">
+            <div
+              class="authentication-page-content p-4 d-flex align-items-center min-vh-100">
+              <div class="w-100">
+                <div class="row justify-content-center">
+                  <div class="col-lg-9">
+                    <div>
+                      <div class="text-center">
+                        <div>
+                          <a href="index.html" class="">
+                            <img id="logopng"  src="../assets/images/logotexto.png" alt="" height="70" class="auth-logo logo-light mx-auto"/>
+                          </a>
+                        </div>
+
+                        <h4 class="font-size-18 mt-4">
+                          Bienvenidos al Sistema de Notas
+                        </h4>
+                        <p class="text-muted">Inicie Sesión para Ingresar.</p>
+                      </div>
+
+                      <div class="p-2 mt-5">
+                        <div class="mb-3 auth-form-group-custom mb-4">
+                          <i class="ri-user-2-line auti-custom-input-icon"></i>
+                          <label for="username" class="fw-semibold">Usuario</label>
+                          <input type="text" class="form-control" id="usu" placeholder="Ingrese Usuario"/>
+                        </div>
+
+                        <div class="mb-3 auth-form-group-custom mb-4">
+                          <i class="ri-lock-2-line auti-custom-input-icon"></i>
+                          <label for="userpassword">Password</label>
+                          <input type="password" class="form-control" id="pass" placeholder="Ingrese Password"/>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                          <button class="btn btn-primary w-md waves-effect waves-light" onclick="Acceso();">ACCEDER</button>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                          <label class="mr-2" for="userpassword">¿Eres Nuevo?</label>
+                          <button class="btn btn-success w-md waves-effect waves-light" data-bs-toggle="modal"
+                            data-bs-target="#AgregarEgresados" title="Agregar">REGISTRATÉ</button>
+                          <?php
+                          require_once 'modalRegistro.php';
+                          ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="authentication-bg">
+              <div class="bg-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </body>
+   <!-- JAVASCRIPT -->
+   <script src="../assets/libs/jquery/jquery.min.js"></script>
+   <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="../assets/libs/metismenu/metisMenu.min.js"></script>
+   <script src="../assets/libs/simplebar/simplebar.min.js"></script>
+   <script src="../assets/libs/node-waves/waves.min.js"></script>
+   <script src="../assets/js/app.js"></script>
+   <script src="../js/acceso.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

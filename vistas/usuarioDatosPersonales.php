@@ -100,7 +100,7 @@ if (isset($_SESSION['perfil']) and isset($_SESSION['usuario'])) {
                                 <input type="text" class="form-control" id="idioma">
                             </div>
                             <div class="col-12 ">
-                                <!-- <button type="button" class="btn btn-success" onclick="ImprimirReporte()">Imprimir ficha familiar</button> -->
+                                <button type="button" class="btn btn-success" onclick="ImprimirReporte()">Imprimir ficha familiar</button>
                                 <button class="btn btn-success " onclick="Actualizar()">Actualizar</button>
                             </div>
                         </form>
